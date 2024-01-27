@@ -4,33 +4,58 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Hostingenie Properties</title>
-    </head>
-    <body>
         <style>
             body {
                 margin: 0;
                 padding: 0;
             }
+            #scrollContainer {
+                width: 100vw;
+                height: 100vh; /* Adjust the height as needed */
+                overflow-y: auto; /* Enable vertical scrollbar */
+
+                /* Modern scrollbar styling for WebKit browsers */
+                scrollbar-width: thin;
+                scrollbar-color: #888888 #f0f0f0;
+            }
+
+            #scrollContainer::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            #scrollContainer::-webkit-scrollbar-thumb {
+                background-color: #888888;
+            }
+
+            #scrollContainer::-webkit-scrollbar-thumb:hover {
+                background-color: #555555;
+            }
+
+            #scrollContainer::-webkit-scrollbar-track {
+                background-color: #f0f0f0;
+            }
         </style>
+    </head>
+    <body>
+        <div id="scrollContainer">
+            <!-- Your content goes here -->
+            <div id="VG_OVERLAY_CONTAINER"></div>
+        </div>
 
-        
-<div style="width: 100vw; height: 100vh;" id="VG_OVERLAY_CONTAINER"></div>
-
-<script defer>
-    (function() {
-        window.VG_CONFIG = {
-            ID: "tlx44ovnm",
-            region: 'na',
-            render: 'full-width', 
-            stylesheets: [
-                "https://storage.googleapis.com/voiceglow-cdn/vg_live_build/styles.css",
-            ],
-        }
-        var VG_SCRIPT = document.createElement("script");
-        VG_SCRIPT.src = "https://storage.googleapis.com/voiceglow-cdn/vg_live_build/vg_bundle.js";
-        document.body.appendChild(VG_SCRIPT);
-    })()
-</script>
-
+        <script defer>
+            (function() {
+                window.VG_CONFIG = {
+                    ID: "tlx44ovnm",
+                    region: 'na',
+                    render: 'full-width', 
+                    stylesheets: [
+                        "https://storage.googleapis.com/voiceglow-cdn/vg_live_build/styles.css",
+                    ],
+                }
+                var VG_SCRIPT = document.createElement("script");
+                VG_SCRIPT.src = "https://storage.googleapis.com/voiceglow-cdn/vg_live_build/vg_bundle.js";
+                document.body.appendChild(VG_SCRIPT);
+            })()
+        </script>
     </body>
-</html>    
+</html>
